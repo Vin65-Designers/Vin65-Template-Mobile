@@ -5,7 +5,7 @@
 /* ====================================================================================================
                 
 	Table of Content
-	Settings
+	Theme Settings
 	1. Typography - Copy to adminmobile.css
 	2. Header
 	3. Navigation
@@ -81,7 +81,7 @@ html {
 body {
   background-color: white;
   color: #666666;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
   margin: 0;
   padding: 0;
   -webkit-text-size-adjust: none;
@@ -92,10 +92,10 @@ a {
   text-decoration: none;
 }
 
-h1, h2, .v65-productGroup-title, .v65m-productMobileDescription h1, h3, .v65-product-title, .v65-wine-specs-title, .v65-wine-profile-title, .v65-product-reviews-title, h4, h5, h6 {
+h1, h2, .v65-productGroup-title, .v65m-productMobileDescription h1, h3, .v65-product-title, .v65m-clubTitle, .v65-wine-specs-title, .v65-wine-profile-title, .v65-product-reviews-title, h4, h5, .v65-product-subtitle, h6 {
   color: #333333;
   font-family: "Times New Roman", Times, serif;
-  font-weight: bold;
+  font-weight: normal;
   margin: 0;
 }
 
@@ -111,7 +111,7 @@ h2, .v65-productGroup-title, .v65m-productMobileDescription h1 {
   margin-bottom: 0.6666666666666666em;
 }
 
-h3, .v65-product-title, .v65-wine-specs-title, .v65-wine-profile-title, .v65-product-reviews-title {
+h3, .v65-product-title, .v65m-clubTitle, .v65-wine-specs-title, .v65-wine-profile-title, .v65-product-reviews-title {
   font-size: 1.3em;
   line-height: 1;
   margin-bottom: 1em;
@@ -123,7 +123,7 @@ h4 {
   margin-bottom: 1.1428571428571428em;
 }
 
-h5 {
+h5, .v65-product-subtitle {
   font-size: 0.984375em;
   line-height: 1.3333333333333333;
   margin-bottom: 1.3333333333333333em;
@@ -184,10 +184,14 @@ input[type=text], input[type=password], input[type=url], input[type=email] {
   padding: 0 0.5em;
   -webkit-appearance: none;
 }
-input[type=checkbox] {
+input[type=radio] {
   border-radius: 0;
-  height: auto;
-  min-width: auto;
+  height: 13px;
+  min-width: 13px;
+}
+input[type=checkbox] {
+  height: 13px;
+  min-width: 13px;
 }
 
 select {
@@ -329,7 +333,7 @@ footer .subNav a {
   margin: 1em 0 0;
 }
 
-article {
+.content {
   background: #fff;
   padding: 1em;
 }
@@ -338,7 +342,7 @@ article {
      5. Footer
 ======================================================================================================== */
 footer {
-  border-top: 1px solid #000;
+  border-top: 1px solid black;
   color: black;
   text-align: center;
   padding-bottom: 1em;
@@ -352,7 +356,7 @@ footer ul {
   padding: 0;
 }
 footer li {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid black;
   height: 44px;
   line-height: 44px;
 }
@@ -468,22 +472,67 @@ a.linkAltBtn span:hover, a.modalLinkAltBtn span:hover, a.modalLinkAltBtn span:ho
      7. Products
 ======================================================================================================== */
 /* ----- a. List ----- */
-.v65-product-addToCart-priceWrapper, .v65-product-addToCart-price,
-.v65-product-addToCart-originalPrice, .v65-product-addToCart-price {
+.v65m-productStandard {
+  padding: 0.5em 0 0.5em 90px;
+  margin-bottom: 0.5em;
+}
+.v65m-productStandard .v65-product-description {
+  border-bottom: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.v65-product-addToCart-priceWrapper {
   padding: 5px 0;
+}
+
+.v65-addToCart-price, .v65-product-addToCart-originalPrice {
+  padding: 0;
+}
+
+.v65-product-addToCart-salePrice {
+  padding: 0 0 0 5px;
 }
 
 .v65-product-addToCart-quantity {
   padding-left: 0;
 }
 
+.v65-product-title, .v65m-clubTitle {
+  margin-bottom: 0.3em;
+}
+
+.v65-product-subtitle {
+  margin-bottom: 0.3em;
+}
+
 /* ----- b. Drilldown ----- */
+#v65m-productMobileDrilldown {
+  padding: 0.5em 0 0.5em 110px;
+}
+#v65m-productMobileDrilldown .v65-product-addToCart-priceWrapper, #v65m-productMobileDrilldown .v65-product-addToCart-unitDescription {
+  padding: 0;
+}
+#v65m-productMobileDrilldown .v65-product-addToCart-price {
+  padding: 0 5px 0 0;
+}
+#v65m-productMobileDrilldown h3, #v65m-productMobileDrilldown .v65-product-title, #v65m-productMobileDrilldown .v65m-clubTitle, #v65m-productMobileDrilldown .v65-wine-specs-title, #v65m-productMobileDrilldown .v65-wine-profile-title, #v65m-productMobileDrilldown .v65-product-reviews-title {
+  margin-bottom: 0;
+}
+#v65m-productMobileDrilldown .v65m-productMobileReviews {
+  margin-bottom: 0.3em;
+}
+
 .v65m-productMobileReviews {
   font-size: 0.75em;
 }
 
 .v65-product-socialBar, .v65-product-description, .v65-wine-specs {
   margin-bottom: 1em;
+}
+
+.v65m-productMobileDescription h1 {
+  margin-bottom: 0.3em;
 }
 
 .v65-product-review-reviewerName {
@@ -589,9 +638,6 @@ select[name="ShipBirthMonth"], select[name="ShipBirthDay"], select[name="ShipBir
 }
 #v65m-LoginFormWrapper input[type=text], #v65m-LoginFormWrapper input[type=password] {
   width: 100% !important;
-}
-#v65m-LoginFormWrapper input[type=checkbox] {
-  margin: 1em 0;
 }
 #v65m-LoginFormWrapper button {
   width: 100%;
