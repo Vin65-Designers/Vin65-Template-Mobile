@@ -1,0 +1,97 @@
+/* ====================================================================================================				
+	Mobile Browser Specific CSS
+==================================================================================================== */
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: white;
+  color: #666666;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: none;
+}
+
+a {
+  color: #369;
+  text-decoration: none;
+}
+
+h1, h2, .v65-productGroup-title, .v65m-productMobileDescription h1, h3, .v65-product-title, .v65-wine-specs-title, .v65-wine-profile-title, .v65-product-reviews-title, h4, h5, h6 {
+  color: #333333;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.8em;
+  line-height: 1;
+  margin-bottom: 0.5em;
+}
+
+h2, .v65-productGroup-title, .v65m-productMobileDescription h1 {
+  font-size: 1.5em;
+  line-height: 1.3333333333333333;
+  margin-bottom: 0.6666666666666666em;
+}
+
+h3, .v65-product-title, .v65-wine-specs-title, .v65-wine-profile-title, .v65-product-reviews-title {
+  font-size: 1.3em;
+  line-height: 1;
+  margin-bottom: 1em;
+}
+
+h4 {
+  font-size: 1.1em;
+  line-height: 1.1428571428571428;
+  margin-bottom: 1.1428571428571428em;
+}
+
+h5 {
+  font-size: 0.984375em;
+  line-height: 1.3333333333333333;
+  margin-bottom: 1.3333333333333333em;
+}
+
+h6 {
+  font-size: 0.875em;
+  line-height: 1.5;
+  margin-bottom: 1.5em;
+}
+
+p, blockquote {
+  font-size: 0.875em;
+  margin: 0 0 1.5em;
+  line-height: 1.5;
+}
+
+dl, ol, ul, table, pre, form {
+  font-size: 0.875em;
+  margin: 0 0 1.5em;
+}
+
+dd, dt, li {
+  line-height: 1.5;
+  margin: 0;
+}
+
+img {
+  border: none;
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Fixes images causing scrolling on mobile, overrides client inline styles */
+legend {
+  color: #111;
+}
+
+hr {
+  background-color: #666;
+  border: 0;
+  color: #666;
+  height: 1px;
+}
