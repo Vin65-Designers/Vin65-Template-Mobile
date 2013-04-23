@@ -169,7 +169,7 @@ hr {
   height: 1px;
 }
 
-input {
+input[type=text], input[type=search], input[type=password], input[type=url], input[type=email] {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -178,20 +178,6 @@ input {
   height: 44px;
   min-width: 44px;
   padding: 0 0.5em;
-}
-input[type=text], input[type=password], input[type=url], input[type=email] {
-  height: 44px;
-  padding: 0 0.5em;
-  -webkit-appearance: none;
-}
-input[type=radio] {
-  border-radius: 0;
-  height: 13px;
-  min-width: 13px;
-}
-input[type=checkbox] {
-  height: 13px;
-  min-width: 13px;
 }
 
 select {

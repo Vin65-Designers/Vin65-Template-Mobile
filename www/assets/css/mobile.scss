@@ -185,33 +185,18 @@ hr {
 }
 
 input{
-	&[type=text], &[type=password], &[type=url], &[type=email]{
+	&[type=text], &[type=search], &[type=password], &[type=url], &[type=email]{
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		
 		height: 44px;
+		min-width: 44px;
 		padding: 0 0.5em;
-		-webkit-appearance:none;
 	}
-
-	&[type=radio]{
-		border-radius: 0;
-		height: 13px;
-		min-width: 13px;
-	}
-
-	&[type=checkbox]{
-		height: 13px;
-		min-width: 13px;
-	}
-	
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	
-	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	
-	height: 44px;
-	min-width: 44px;
-	padding: 0 0.5em;
 }
 
 select{

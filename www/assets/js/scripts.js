@@ -44,13 +44,12 @@ $(document).ready(function() {
 			url: "/index.cfm?method=pages.showPhotoGalleryXML&photogalleryid="+settings.galleryId+defaults.timestamp,
 			dataType: "xml",
 			success: function(xml) {
-				var images = '<div class="v65-galleryWrap">';
+				var siteURL = $(xml).find('album').attr('siteURL'), images = '<div class="v65-galleryWrap">';
 				$(xml).find('img').each(function() {
-					var 	siteUrl = 'http://template1.vin65.com',
-						location = '/assets/images/photogallery/images/large/',
+					var 	location = 'assets/images/photogallery/images/large/',
 						photo = $(this).attr('src'),
 						caption = $(this).attr('caption');
-					images += '<img src="'+siteUrl+location+photo+'" alt="'+caption+'"/>';
+					images += '<img src="'+siteURL+location+photo+'" alt="'+caption+'"/>';
 				});
 				gallery.append(images + '</div>');
 			},
